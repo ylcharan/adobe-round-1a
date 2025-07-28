@@ -1,0 +1,3 @@
+PyMuPDF==1.24.3   # PDF parsing & rendering (imported as fitz)
+pillow==10.4.0    # Image handling for OCR (imported as PIL)
+pytesseract==0.3.10  # Python wrapper for the Tesseract OCR engine
