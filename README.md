@@ -14,7 +14,18 @@ This is a **complete solution** for Challenge 1a of the Adobe India Hackathon 20
 
 ### Installation
 
+### Docker Deployment
+
 ```bash
+# Build the Docker image
+docker build --platform linux/amd64 -t pdf-processor .
+
+# Test with sample data
+docker run --rm -v $(pwd)/input:/app/input:ro -v $(pwd)/output:/app/output --network none pdf-processor
+```
+```bash
+
+
 # Install Python dependencies
 pip install -r requirements.txt
 
@@ -32,15 +43,6 @@ python test_simple.py
 python process_pdfs.py
 ```
 
-### Docker Deployment
-
-```bash
-# Build the Docker image
-docker build --platform linux/amd64 -t pdf-processor .
-
-# Test with sample data
-docker run --rm -v $(pwd)/input:/app/input:ro -v $(pwd)/output:/app/output --network none pdf-processor
-```
 
 ## Official Challenge Guidelines
 
