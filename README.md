@@ -23,6 +23,8 @@ docker build --platform linux/amd64 -t pdf-processor .
 # Test with sample data
 docker run --rm -v $(pwd)/input:/app/input:ro -v $(pwd)/output:/app/output --network none pdf-processor
 ```
+
+### Local Testing
 ```bash
 
 
@@ -33,13 +35,8 @@ pip install -r requirements.txt
 python -c "import fitz; print('PyMuPDF installed successfully')"
 ```
 
-### Local Testing
-
 ```bash
-# Test with sample data
-python test_simple.py
-
-# Or run directly
+# run
 python process_pdfs.py
 ```
 
